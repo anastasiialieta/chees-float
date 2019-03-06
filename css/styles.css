@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+body {
+	background: #fff;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+h1 {
+	text-align: center;
+	padding: 40px 0;
+	font-family: Times New Roman, sans-serif;
+	font-size: 35px;
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+	color: #000000;
+}
+
+
+.container-for-board {
+
+}
+
+.board-edge {
+	margin: 0 auto;
+	width: 1100px;
+	height: 1100px;
+	padding: 50px;
+    background: grey;
+}
+
+.board {
+	height: 100%;
+}
+
+.cell-row {
+	overflow: hidden;
+}
+
+
+.coord {
+	background: red;
+	float:left;
+	height: 100px;
+	width: 100px;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f1c28c;
+	color: grey;
+}
+
+.cell {
+	height: 100px;
+	width: 100px;
+	float:left;
+}
+
+
+.odd .cell:nth-child(2n) {
+	background: #000;
+}
+
+.odd .cell:nth-child(2n+1) {
+	background: #fff;
+}
+
+.even .cell:nth-child(2n+1) {
+	background: #000;
+}
+
+.even .cell:nth-child(2n) {
+	background: #fff;
+}
+
+
+.even.black .cell:nth-child(2n+1)::after {
+	margin: 14px 0 0 14px;
+	content:'';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	
+}
+
+
+.even.black .cell:nth-child(2n+1)::before {
+	margin: 5px 0 0 5px;
+	content:'';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.odd.black .cell:nth-child(2n)::after {
+	margin: 14px 0 0 14px;
+	content:'';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	
+}
+
+
+.odd.black .cell:nth-child(2n)::before {
+	margin: 5px 0 0 5px;
+	content:'';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+
+.even.white .cell:nth-child(2n+1)::after {
+	margin: 14px 0 0 14px;
+	content:'';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	
+}
+
+.even.white .cell:nth-child(2n+1)::before {
+	margin: 5px 0 0 5px;
+	content:'';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background: #353939;
+	border-radius: 50%;
+}
+
+.odd.white .cell:nth-child(2n)::after {
+	margin: 14px 0 0 14px;
+	content:'';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	
+}
+
+.odd.white .cell:nth-child(2n)::before {
+	margin: 5px 0 0 5px;
+	content:'';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background: #353939;
+	border-radius: 50%;
+}
+
